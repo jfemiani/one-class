@@ -63,9 +63,9 @@
 \listoffigures
 \addtocontents{lof}{Figure~\hfill Page \par}
 \newpage
-%\addcontentsline{toc}{part}{LIST OF SYMBOLS}
-%\addtocontents{toc}{CHAPTER \par}
-%\listofsymbols
+\addcontentsline{toc}{part}{LIST OF SYMBOLS}
+\addtocontents{toc}{CHAPTER \par}
+\listoftables
 
 % This gets the headers for the LOF right on the first page.  Subsequent pages
 % are handled by the fancyhdr code in the asudis.sty file.
@@ -82,11 +82,9 @@
 
 \section{Motivation}
 
-%Study how prior art justifies feature extraction.
-%look for examples and build an outline before writing this. 
-% You MUST write, I will edit / suggest once you start the ball. 
+Modern technology such as \acp{UAV} enables the acquisition of large amounts of high temporal and spatial resolution aerial imagery. Aerial imagery is useful for reconnaissance, analysis, and map-making applications. The application areas could benefit from the ability to automatically locate important features within the imagery.
 
-%Basic idea: Lots of imagery (where is it coming from).  Some imporant applications (reconnaissancem, analysis, civil engineeringm mapmaking, simulation). Benefit from ability to find categories of object quickly.  Traditional classification involves binary decision learned by sampling target image patches and non-target image patches. We argue that magery is generally so convex is is not feesible to sample negative features adequately. 
+%TODO: Salil, you will need to add much more 
 
 \section{Problem Statement}
 
@@ -96,7 +94,7 @@ Then the problem can be stated as follows: we are \textbf{given} X and our \text
 
 \section{Objective}
 
-The aim of this work is to evaluate methods that may solve the one-class extraction problem in the context of aerial imagery, particularly when applied to feature extraction problems such as the task of locating all image patches that contain vehicles in a large image. 
+The aim of this work is to evaluate methods that may solve the one-class extraction problem in the context of aerial imagery, particularly when applied to feature extraction problems such as the task of locating all sub-images of vehicles in an image. 
 
 
 \section{Contributions}
@@ -112,10 +110,6 @@ We make the following contributions:
 \chapter{Related Work}
 
 % I recommend the use of jabref & a minf mapper like docear to organize work. 
-
-The topic of one-class machine learning has been covered by the survey paper \cite{Khan2010, Khan2014}. 
-
-
 
 % * More than a literature review
 % * Organize related work - impose structure
@@ -147,7 +141,7 @@ The topic of one-class machine learning has been covered by the survey paper \ci
 % intyroduce more notation ets. 
 
 
-\chapter{Evaluation and Results}
+\chapter{Results}
 %15-30 pages OR MORE
 %figures and tables
 
@@ -160,25 +154,7 @@ The topic of one-class machine learning has been covered by the survey paper \ci
 % give QUANTITATIVE tables etc.
 
 %Also, point out examples (qualitative) where things work as expected, better than expected, or where they fail.
-% Failure cases are very important, esp. with explanation of why they might have failed.
-
-
-\begin{table}
-  \centering
-  \caption{Recall on 50\% of the labeled data when trained using increasing amounts of data.}
-  \label{table:recall-vs-training-set-size}
-  \begin{tabular}{cccccc} 
-                                 & 10\% & 20\% & 30\% & 40\% & 50\% \\ 
-      \hline 
-      1C-SVM, \cite{chen2001one}  &      &      &      &      &      \\ 
-      Method2                    &      &      &      &      &      \\ 
-      Method3                    &      &      &      &      &      \\ 
-      \hline 
-  \end{tabular}
-\end{table}
-
-
-
+% Failure cases are very important, esp. with explanation of why they might have failed. 
 
 
 \chapter{Conclusion and Future Work}  
@@ -201,7 +177,7 @@ The topic of one-class machine learning has been covered by the survey paper \ci
 % ftp://tug.ctan.org/pub/tex-archive/macros/latex/contrib/tocloft/tocloft.pdf
 \addcontentsline{toc}{part}{REFERENCES}
 \bibliographystyle{asudis}
-\bibliography{thesis}}
+\bibliography{dis}}
 \renewcommand{\chaptername}{APPENDIX}
 \addtocontents{toc}{APPENDIX \par}
 \appendix
