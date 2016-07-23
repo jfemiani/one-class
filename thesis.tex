@@ -63,9 +63,9 @@
 \listoffigures
 \addtocontents{lof}{Figure~\hfill Page \par}
 \newpage
-\addcontentsline{toc}{part}{LIST OF SYMBOLS}
-\addtocontents{toc}{CHAPTER \par}
-\listoftables
+%\addcontentsline{toc}{part}{LIST OF SYMBOLS}
+%\addtocontents{toc}{CHAPTER \par}
+%\listofsymbols
 
 % This gets the headers for the LOF right on the first page.  Subsequent pages
 % are handled by the fancyhdr code in the asudis.sty file.
@@ -147,7 +147,7 @@ The topic of one-class machine learning has been covered by the survey paper \ci
 % intyroduce more notation ets. 
 
 
-\chapter{Results}
+\chapter{Evaluation and Results}
 %15-30 pages OR MORE
 %figures and tables
 
@@ -160,7 +160,26 @@ The topic of one-class machine learning has been covered by the survey paper \ci
 % give QUANTITATIVE tables etc.
 
 %Also, point out examples (qualitative) where things work as expected, better than expected, or where they fail.
-% Failure cases are very important, esp. with explanation of why they might have failed. 
+% Failure cases are very important, esp. with explanation of why they might have failed.
+
+\section{Training Set Size vs Recall}
+ 
+\begin{table}
+  \centering
+  \caption{Recall on 50\% of the labeled data when trained using increasing amounts of data.}
+  \label{table:recall-vs-training-set-size}
+  \begin{tabular}{cccccc} 
+                                 & 10\% & 20\% & 30\% & 40\% & 50\% \\ 
+      \hline 
+      1C-SVM, \cite{chen2001one}  &      &      &      &      &      \\ 
+      Method2                    &      &      &      &      &      \\ 
+      Method3                    &      &      &      &      &      \\ 
+      \hline 
+  \end{tabular}
+\end{table}
+
+
+
 
 
 \chapter{Conclusion and Future Work}  
